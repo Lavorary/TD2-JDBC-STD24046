@@ -3,17 +3,29 @@ import lombok.*;
 import java.util.List;
 @Data
 @EqualsAndHashCode
-@Builder
-
+@ToString
 
 public class Dish {
-    int id;
-    String name;
-    DishTypeEnum dishType;
-    List<Ingredient> ingredients;
+    private int id;
+    private String name;
+    private DishTypeEnum dishType;
+    private List<Ingredient> ingredients;
 
 
-    Double getDishPrice() {
-        return ingredients.getLast().price;
+    public Double getDishPrice() {
+       // throw new UnsupportedOperationException("Not implemented.");
+
+        return ingredients.stream()
+                .map(Ingredient::getPrice)
+                .reduce(0.0, Double::sum);
+
+        /*double totalPrice = 0;
+        for (int i = 0; i < ingredients.size(); i++) {
+            totalPrice += ingredients.get(i).getPrice();
+        }
+        return totalPrice;*/
+
     };
+
+
 }

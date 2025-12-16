@@ -1,14 +1,23 @@
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+
+@Data
+@EqualsAndHashCode
+@ToString
+
 public class Ingredient {
-    int id;
-    String name;
-    Double price;
-    CategoryEnum category;
-    Dish dish;
+    private int id;
+    private String name;
+    private Double price;
+    private CategoryEnum category;
+    private Dish dish;
 
 
 
-    String getDishName() {
-        return this.name;
+    public String getDishName() {
+       throw  new UnsupportedOperationException("Not implemented.");
+
     }
 
 }
