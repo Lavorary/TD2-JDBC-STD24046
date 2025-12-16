@@ -13,7 +13,7 @@ CREATE TABLE Ingredient (
 );
 
 CREATE TABLE Dish(
-    id INT PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     dish_type Dish_type NOT NULL
 );
