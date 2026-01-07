@@ -10,14 +10,19 @@ public class Ingredient {
     private int id;
     private String name;
     private Double price;
+    private Double RequiredQuantity;
     private CategoryEnum category;
     private Dish dish;
 
 
 
     public String getDishName() {
-       throw  new UnsupportedOperationException("Not implemented.");
-
+      if (dish != null){
+          return dish.getName();
+      }
+      return null;
     }
+
+
 
 }

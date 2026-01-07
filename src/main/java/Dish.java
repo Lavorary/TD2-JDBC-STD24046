@@ -13,17 +13,24 @@ public class Dish {
 
 
     public Double getDishCost() {
-       // throw new UnsupportedOperationException("Not implemented.");
 
-        return ingredients.stream()
-                .map(Ingredient::getPrice)
-                .reduce(0.0, Double::sum);
+        Double totalPrice = 0.0;
+       for (Ingredient ingredient : ingredients) {
+           Double Price = ingredient.getPrice();
+            Double quantity = ingredient.getRequiredQuantity();
 
-        /*double totalPrice = 0;
-        for (int i = 0; i < ingredients.size(); i++) {
-            totalPrice += ingredients.get(i).getPrice();
-        }
-        return totalPrice;*/
+            if(quantity != 0){
+                totalPrice += Price * quantity;
+            }
+            else{
+                throw new RuntimeException("quantity required null");
+            }
+
+
+       };
+
+       return totalPrice;
+
 
     };
 
