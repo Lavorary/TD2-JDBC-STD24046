@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourcePerFileMappings">
+    <file url="mock:///data.sql" value="ca4e87b9-869d-4785-b236-37224f3ae0e0" />
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/ca4e87b9-869d-4785-b236-37224f3ae0e0/console.sql" value="ca4e87b9-869d-4785-b236-37224f3ae0e0" />
+    <file url="file://$PROJECT_DIR$/src/main/java/DataRetriever.java" value="ca4e87b9-869d-4785-b236-37224f3ae0e0" />
+  </component>
+</project>

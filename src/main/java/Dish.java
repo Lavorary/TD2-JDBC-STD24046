@@ -12,7 +12,7 @@ public class Dish {
     private List<Ingredient> ingredients;
 
 
-    public Double getDishPrice() {
+    public Double getDishCost() {
        // throw new UnsupportedOperationException("Not implemented.");
 
         return ingredients.stream()
